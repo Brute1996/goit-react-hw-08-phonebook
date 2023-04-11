@@ -7,10 +7,5 @@ export const AuthMenuStyle = styled.div`
 
   .auth-menu-link {
     padding: 8px;
-
-    &:hover {
-      color: red;
-      border-bottom: 3px solid;
-    }
   }
 `;

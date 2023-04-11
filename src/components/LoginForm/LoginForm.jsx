@@ -1,6 +1,8 @@
+import { Button, TextField } from "@mui/material";
 import { userLogIn } from "components/store/auth/auth.api";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
+import { LoginFormStyle } from "./LoginForm.styled";
 
 export const LoginForm = () => {
     const dispatch = useDispatch();
@@ -33,17 +35,15 @@ export const LoginForm = () => {
 
     return (
         <>
-            <form onSubmit={handleSubmit}>
+            <LoginFormStyle onSubmit={handleSubmit}>
                 <label>
-                    E-mail
-                    <input onChange={handleChange} autoComplete="on" name="email" type="email"/>
+                    <TextField label="Email" variant="outlined" onChange={handleChange} autoComplete="on" name="email" type="email" />
                 </label>
                 <label>
-                    Password
-                    <input onChange={handleChange} autoComplete="on" name="password" type="password"/>
+                    <TextField label="Password" variant="outlined" onChange={handleChange} autoComplete="on" name="password" type="password" />
                 </label>
-                <button type="submit">Log in</button>
-            </form>
+                <Button variant="outlined" type="submit">Log in</Button>
+            </LoginFormStyle>
             
         </>
     );

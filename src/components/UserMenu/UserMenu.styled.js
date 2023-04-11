@@ -12,10 +12,7 @@ export const UserMenuStyle = styled.div`
 
   .user-menu-link {
     padding: 8px;
-    border-bottom: 3px solid;
-
-    &:hover {
-      color: red;
+    &.active {
       border-bottom: 3px solid;
     }
   }

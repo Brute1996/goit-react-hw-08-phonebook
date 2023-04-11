@@ -1,6 +1,8 @@
 import { userRegister } from "components/store/auth/auth.api";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
+import { RegistrationFormStyle } from "./RegistrationForm.styled";
+import { Button, TextField } from "@mui/material";
 
 export const RegistrationForm = () => {
     const dispatch = useDispatch();
@@ -39,21 +41,18 @@ export const RegistrationForm = () => {
 
     return (
         <>
-            <form onSubmit={handleSubmit}>
+            <RegistrationFormStyle onSubmit={handleSubmit}>
                 <label>
-                    Name
-                    <input onChange={handleChange} autoComplete="on" name="name"/>
+                    <TextField id="outlined-basic" label="Name" variant="outlined"  onChange={handleChange} autoComplete="on" name="name"/>
                 </label>
                 <label>
-                    E-mail
-                    <input onChange={handleChange} autoComplete="on" type="email" name="email"/>
+                    <TextField label="E-mail" variant="outlined" onChange={handleChange} autoComplete="on" type="email" name="email"/>
                 </label>
                 <label>
-                    Password
-                    <input onChange={handleChange} autoComplete="on" type="password" name="password"/>
+                    <TextField label="Password" variant="outlined" onChange={handleChange} autoComplete="on" type="password" name="password"/>
                 </label>
-                <button type="submit">Create account</button>
-            </form>
+                <Button variant="outlined" type="submit"> Create account</Button>
+            </RegistrationFormStyle>
         </>
     );
 };

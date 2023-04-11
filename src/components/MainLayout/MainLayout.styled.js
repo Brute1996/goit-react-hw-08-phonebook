@@ -5,13 +5,8 @@ export const MainLayoutStyle = styled.div`
   margin: 0 auto;
 
   header {
-    border-bottom: 2px solid;
+    border-bottom: 2px solid #1976d2;
     padding: 16px;
     font-size: 26px;
-  }
-
-  .active {
-    color: red;
-    border-bottom: 3px solid;
   }
 `;

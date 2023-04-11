@@ -6,7 +6,6 @@ export default function PublicRoute({ children, restricted = false }) {
 
 
     const shouldRedirect = isLoggedIn && restricted;
-    console.log(shouldRedirect);
 
     return shouldRedirect ? <Navigate to='/contacts'/> : children;
     }
